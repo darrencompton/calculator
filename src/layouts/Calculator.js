@@ -21,7 +21,7 @@ class Calculator extends Component {
       equation += " " + pressedButton + " ";
     else if (pressedButton === "=") {
       try {
-        const evalResult = eval(equation);
+        const evalResult = this.eval(equation);
         const result = Number.isInteger(evalResult)
           ? evalResult
           : evalResult.toFixed(2);
